@@ -9,17 +9,11 @@
 import UIKit
 
 class StopWatch: UIViewController {
-    //var timer = Timer();
+
     var seconds = 0;
     var minutes = 0;
     var mils = 0;
     
-    /*func endTimer(){
-        timer.invalidate();
-    }
-    func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(StopWatch.countUp), userInfo: nil, repeats: true)
-    }*/
     func countUp(){
         mils+=1;
         if(mils>99){
