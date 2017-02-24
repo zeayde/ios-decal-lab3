@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usq-Gf-QQO">
+                                <rect key="frame" x="33" y="273" width="305" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pe-2N-1V0">
+                                <rect key="frame" x="306" y="546" width="32" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.057937368039999999" blue="0.057023104650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcP-Yg-qc3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTz-Zl-mb2">
+                                <rect key="frame" x="33" y="546" width="34" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0021817689239999999" green="0.76836939100000001" blue="0.0033852131360000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" title="b"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHY-iC-4AJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uab-dk-tVt">
+                                <rect key="frame" x="76" y="28" width="222" height="48"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Stopwatch">
+                                        <attributes>
+                                            <color key="NSColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="41" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="uab-dk-tVt" secondAttribute="trailing" constant="61" id="9ki-Dp-CKH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Usq-Gf-QQO" secondAttribute="trailing" constant="21" id="Cz0-xu-rae"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HTz-Zl-mb2" secondAttribute="bottom" constant="91" id="D7G-bZ-b6Z"/>
+                            <constraint firstItem="uab-dk-tVt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Eyp-Tg-V0Y"/>
+                            <constraint firstItem="uab-dk-tVt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KsL-He-ioL"/>
+                            <constraint firstItem="Usq-Gf-QQO" firstAttribute="top" secondItem="uab-dk-tVt" secondAttribute="bottom" constant="197" id="Lv5-Ey-0Ry"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5pe-2N-1V0" secondAttribute="bottom" constant="91" id="T92-Pg-PCa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5pe-2N-1V0" secondAttribute="trailing" constant="21" id="dY0-Nn-1hv"/>
+                            <constraint firstItem="HTz-Zl-mb2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="kqO-V6-50c"/>
+                            <constraint firstItem="Usq-Gf-QQO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="rrx-yG-7N2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="time" destination="Usq-Gf-QQO" id="1Qr-3e-n7D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+</document>
